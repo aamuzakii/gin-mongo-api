@@ -16,11 +16,7 @@ func main() {
 	router := gin.Default()
 	configs.ConnectDB()
 	routes.UserRoute(router)
-
-	// r.GET("/", func(c *gin.Context) {
-	// 	// give the response to client in JSON format
-	// 	c.JSON(http.StatusOK, gin.H{"name": "Muhammad Salaf"})
-	// })
+	routes.ProductRoute(router)
 
 	// run our server
 	router.Run()
