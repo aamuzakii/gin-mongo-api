@@ -38,12 +38,9 @@ func CreateUser() gin.HandlerFunc {
 
 		newUser := models.User{
 			Id:       primitive.NewObjectID(),
-			Name:     "user.Name",
-			Location: "user.Location",
-			Title:    "user.Title",
-			// Name:     user.Name,
-			// Location: user.Location,
-			// Title:    user.Title,
+			Name:     user.Name,
+			Location: user.Location,
+			Title:    user.Title,
 		}
 
 		result, err := userCollection.InsertOne(ctx, newUser)
